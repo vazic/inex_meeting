@@ -6,4 +6,6 @@ credential:
   password: Juniper
 pe_bgp_asn: 65000
 
-ansible_python_interpreter: /Users/victor.zakharyev/.virtualenv/generic/bin/python
+#Uncomment following with right path to use virtualenv for ansible instead of system install
+# (you likely need to update path to _your_ Virtualenv instance)
+#ansible_python_interpreter: /Users/victor.zakharyev/.virtualenv/generic/bin/python
