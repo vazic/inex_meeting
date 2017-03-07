@@ -22,3 +22,9 @@ interfaces:
     ip: 10.3.5.0
     peer: 10.3.5.1
     mask: 31
+
+mon_interfaces:
+  - name: ge-0/0/4
+    description: Monitoring interface
+    ip: 10.10.10.13
+    mask: 24

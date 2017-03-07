@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 # Check required plugins
-REQUIRED_PLUGINS = %w(vagrant-junos vagrant-host-shell vagrant-vyatta)
+REQUIRED_PLUGINS = %w(vagrant-junos vagrant-host-shell)
 exit unless REQUIRED_PLUGINS.all? do |plugin|
   Vagrant.has_plugin?(plugin) || (
     puts "The #{plugin} plugin is required. Please install it with:"
@@ -49,6 +49,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	vsrx3.vm.network "private_network", virtualbox__intnet: "net2"
 	vsrx3.vm.network "private_network", virtualbox__intnet: "net4"
 	vsrx3.vm.network "private_network", virtualbox__intnet: "net5"
+	vsrx3.vm.network "private_network", virtualbox__intnet: "net_mon"
 	vsrx3.vm.box = "juniper/ffp-12.1X47-D15.4-packetmode"
 	vsrx3.vm.provider :virtualbox  do |vb|
 		vb.name = "junos3"
@@ -113,9 +114,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             ]
           }
           ansible.playbook = ansible.playbook = "vsrx.yml"
-#         ansible.verbose = "vvv"
+          ansible.verbose = "vvv"
       end
   	end
 end
-
-

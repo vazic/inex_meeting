@@ -4,3 +4,4 @@
       provider: "{{ credential }}"
       src: "pe_vsrx.conf"
       action : overwrite
+      timeout: 20

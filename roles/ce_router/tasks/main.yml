@@ -3,4 +3,5 @@
   junos_template:
       provider: "{{ credential }}"
       src: "ce_vsrx.conf"
-      action : overwrite
+      action: overwrite
+      timeout: 20

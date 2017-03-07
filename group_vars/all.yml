@@ -5,3 +5,5 @@ credential:
   username: root
   password: Juniper
 pe_bgp_asn: 65000
+
+ansible_python_interpreter: /Users/victor.zakharyev/.virtualenv/generic/bin/python
